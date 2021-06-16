@@ -545,12 +545,12 @@ X_D3DResource * WINAPI EMUPATCH(D3DDevice_CreateTexture2)
 // ******************************************************************
 xbox::hresult_xt WINAPI EMUPATCH(D3DDevice_CreateTexture)
 (
-    uint_xt                Width,
-    uint_xt                Height,
-    uint_xt                Levels,
-    dword_xt               Usage,
+    uint_xt             Width,
+    uint_xt             Height,
+    uint_xt             Levels,
+    dword_xt            Usage,
     X_D3DFORMAT         Format,
-    D3DPOOL             Pool,
+	X_D3DPOOL           Pool,
     X_D3DTexture      **ppTexture
 );
 
@@ -559,13 +559,13 @@ xbox::hresult_xt WINAPI EMUPATCH(D3DDevice_CreateTexture)
 // ******************************************************************
 xbox::hresult_xt WINAPI EMUPATCH(D3DDevice_CreateVolumeTexture)
 (
-    uint_xt                 Width,
-    uint_xt                 Height,
-    uint_xt                 Depth,
-    uint_xt                 Levels,
-    dword_xt                Usage,
+    uint_xt              Width,
+    uint_xt              Height,
+    uint_xt              Depth,
+    uint_xt              Levels,
+    dword_xt             Usage,
     X_D3DFORMAT          Format,
-    D3DPOOL              Pool,
+	X_D3DPOOL            Pool,
     X_D3DVolumeTexture **ppVolumeTexture
 );
 
@@ -574,11 +574,11 @@ xbox::hresult_xt WINAPI EMUPATCH(D3DDevice_CreateVolumeTexture)
 // ******************************************************************
 xbox::hresult_xt WINAPI EMUPATCH(D3DDevice_CreateCubeTexture)
 (
-    uint_xt                 EdgeLength,
-    uint_xt                 Levels,
-    dword_xt                Usage,
-    X_D3DFORMAT          Format,
-    D3DPOOL              Pool,
+    uint_xt             EdgeLength,
+    uint_xt             Levels,
+    dword_xt            Usage,
+    X_D3DFORMAT         Format,
+	X_D3DPOOL           Pool,
     X_D3DCubeTexture  **ppCubeTexture
 );
 
@@ -587,10 +587,10 @@ xbox::hresult_xt WINAPI EMUPATCH(D3DDevice_CreateCubeTexture)
 // ******************************************************************
 xbox::hresult_xt WINAPI EMUPATCH(D3DDevice_CreateIndexBuffer)
 (
-    uint_xt                 Length,
-    dword_xt                Usage,
+    uint_xt              Length,
+    dword_xt             Usage,
     X_D3DFORMAT          Format,
-    D3DPOOL              Pool,
+	X_D3DPOOL            Pool,
     X_D3DIndexBuffer   **ppIndexBuffer
 );
 
@@ -953,10 +953,10 @@ xbox::void_xt WINAPI EMUPATCH(D3DCubeTexture_LockRect)
 // ******************************************************************
 xbox::hresult_xt WINAPI EMUPATCH(D3DDevice_CreateVertexBuffer)
 (
-    uint_xt                Length,
-    dword_xt               Usage,
-    dword_xt               FVF,
-    D3DPOOL             Pool,
+    uint_xt             Length,
+    dword_xt            Usage,
+    dword_xt            FVF,
+	X_D3DPOOL           Pool,
     X_D3DVertexBuffer **ppVertexBuffer
 );
 #endif
